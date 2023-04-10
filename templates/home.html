@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Strona Główna</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="container">
+	<main>
+		<h2>Ankieta dotycząca wpływu ćwiczeń na ciśnienie</h2>
+		<p>Celem przeprowadzonych badań jest zbadanie wpływu ćwiczeń fizycznych na poziom ciśnienia tętniczego u osób dorosłych. Chcemy dowiedzieć się, jakie ćwiczenia są najskuteczniejsze w obniżaniu ciśnienia oraz jak często należy je wykonywać.</p>
+	</main>
+
+    <nav>
+		<ul>
+			<li><a href="{% url 'survey' %}">Przejdź do ankiety</a></li>
+		</ul>
+	</nav>
+
+	<footer>
+		<p>&copy; 2023 Daniel Cieślak &amp; Maciej Kapłan</p>
+	</footer>
+</body>
+</html>

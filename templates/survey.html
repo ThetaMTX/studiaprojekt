@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static './style.css' %}">
+  <form method="post" action="{% url 'thank_you' %}">
+    {% csrf_token %}
+    {% for question in questions %}
+      <div class="question">
+        <h3>{{ question.question_text }}</h3>
+        <div class="video-wrapper">
+          <iframe src="{{ question.video_url }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {{ form.response }}
+        <input type="visible" name="question" value="{{ question.id }}">
+      </div>
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

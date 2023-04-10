@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static './static/style.css' %}">
+<h1>Wyniki</h1>
+{% for question in questions %}
+<h3>{{ question.question_text }}</h3>
+<ul>
+  {% for response in question.response_set.all %}
+  <li>{{ response.pressure_result }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}
