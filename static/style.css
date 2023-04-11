@@ -105,6 +105,7 @@ main p {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
+  overflow: hidden;
 }
 
 .video-wrapper iframe {
@@ -115,6 +116,7 @@ main p {
   height: 100%;
   border: 0;
 }
+
 
 input[type="text"],
 select {
