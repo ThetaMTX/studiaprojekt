@@ -12,7 +12,7 @@
           <iframe src="{{ question.video_url }}" frameborder="0" allowfullscreen></iframe>
         </div>
         <input type="hidden" name="question" value="{{ question.id }}">
-        <input type="text" name="response" required>
+        <input type="text" name="response" pattern="[0-9/]+" required>
       </div>
     {% endfor %}
     <button type="submit">Submit</button>
