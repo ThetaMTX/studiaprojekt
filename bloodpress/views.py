@@ -1,26 +1,22 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Question
-from .forms import ResponseForm
-from django.contrib import messages
+from .models import Question, Response
 
 
 def survey(request):
     questions = Question.objects.all()
     if request.method == 'POST':
-        form = ResponseForm(request.POST)
-        if form.is_valid():
-            question_id = form.cleaned_data['question']
-            question = Question.objects.get(pk=question_id)
-            response = form.cleaned_data['response']
-            question.responses.create(response_text=response)
-            messages.success(request, 'Odpowiedź została zapisana!')
-            return HttpResponseRedirect('/')
-        else:
-            messages.error(request, 'Nieprawidłowe dane')
-    else:
-        form = ResponseForm(questions)
-    return render(request, 'survey.html', {'form': form, 'questions': questions})
+        for question in questions:
+            response_text = request.POST.get(f'response_{question.id}')
+            if response_text:
+                survey_response = Response.objects.create(
+                    question=question,
+                    user=request.user if request.user.is_authenticated else None,
+                    response_text=response_text
+                )
+        return redirect('thank_you')
+    return render(request, 'survey.html', {'questions': questions})
+
 
 
 def thank_you(request):

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static './style.css' %}">
+  <link rel="stylesheet" href="{% static './style.css' %}">
   <form method="post" action="{% url 'thank_you' %}">
     {% csrf_token %}
     {% for question in questions %}
@@ -11,8 +11,8 @@
         <div class="video-wrapper">
           <iframe src="{{ question.video_url }}" frameborder="0" allowfullscreen></iframe>
         </div>
-        {{ form.response }}
-        <input type="visible" name="question" value="{{ question.id }}">
+        <input type="hidden" name="question" value="{{ question.id }}">
+        <input type="text" name="response" required>
       </div>
     {% endfor %}
     <button type="submit">Submit</button>

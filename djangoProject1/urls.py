@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from bloodpress.views import survey, home , thank_you
+from bloodpress.views import survey, home, thank_you
 
 
 urlpatterns = [
