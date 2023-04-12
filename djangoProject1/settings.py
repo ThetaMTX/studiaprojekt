@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-qq7i2%w+$$t%&cyy0s)9zjo=9cd7q(jp*)^6xeadf@#!*ngy)r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', '1').lower() in ['true', 't', '1']
 
-ALLOWED_HOSTS = ['https://blood-press.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://blood-press.onrender.com']
 
 
 # Application definition
