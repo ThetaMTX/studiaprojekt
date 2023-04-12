@@ -26,13 +26,11 @@ load_dotenv(BASE_DIR / '.env')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-qq7i2%w+$$t%&cyy0s)9zjo=9cd7q(jp*)^6xeadf@#!*ngy)r'
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = ['blood-press.onrender.com']
 
 
 # Application definition
