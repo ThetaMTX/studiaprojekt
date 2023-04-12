@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     video_url = models.URLField()
