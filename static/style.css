@@ -163,7 +163,7 @@ img {
 }
 
 .radio-group label {
-  display: block;
+  display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
