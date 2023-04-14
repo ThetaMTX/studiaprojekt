@@ -155,7 +155,7 @@ img {
 }
 
 .radio-group {
-  display: flex;
+  display: block;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
@@ -163,12 +163,13 @@ img {
 }
 
 .radio-group label {
-  display: flex;
+  display: block;
   align-items: center;
   margin-bottom: 5px;
 }
 
 .radio-group input[type="radio"] {
+  display: block;
   margin-right: 5px;
 }
 
