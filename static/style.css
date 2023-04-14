@@ -154,3 +154,19 @@ img {
     margin-right: 20px;
 }
 
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+
