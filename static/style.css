@@ -87,7 +87,7 @@ main p {
 }
 
 .question {
-  margin: 45px auto;
+  margin: 30px auto;
   padding: 20px;
   max-width: 800px;
   background-color: #fff;
@@ -156,7 +156,10 @@ img {
 
 .radio-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .radio-group label {

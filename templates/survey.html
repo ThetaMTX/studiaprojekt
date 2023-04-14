@@ -5,25 +5,25 @@
   <link rel="stylesheet" href="{% static './style.css' %}">
   <form method="post" action="{% url 'thank_you' %}">
     {% csrf_token %}
-    <div class="form-group">
-      <label>Gender:</label>
+    <div class="question">
+      <label>Płeć:</label>
       <div class="radio-group">
         <label>
           <input type="radio" name="gender" value="M" required>
-          <span>Male</span>
+          <span>Mężczyzna</span>
         </label>
         <label>
-          <input type="radio" name="gender" value="F" required>
-          <span>Female</span>
+          <input type="radio" name="gender" value="K" required>
+          <span>Kobieta</span>
         </label>
       </div>
     </div>
-    <div class="form-group">
-      <label>Age Range:</label>
+    <div class="question">
+      <label>Wiek:</label>
       <div class="radio-group">
         <label>
           <input type="radio" name="age_range" value="<20" required>
-          <span>Less than 20</span>
+          <span>Mniej niż 20</span>
         </label>
         <label>
           <input type="radio" name="age_range" value="20-35" required>
@@ -39,7 +39,7 @@
         </label>
         <label>
           <input type="radio" name="age_range" value="65+" required>
-          <span>65 and above</span>
+          <span>65 i więcej</span>
         </label>
       </div>
     </div>
