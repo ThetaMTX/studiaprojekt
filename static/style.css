@@ -169,7 +169,7 @@ img {
 }
 
 .radio-group input[type="radio"] {
-  display: block;
+  display: flex;
   margin-right: 5px;
 }
 
